@@ -1,0 +1,30 @@
+{
+	"name": "fornecedorsql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "COD_FORNECEDOR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FANTASIA",
+				"type": "varchar"
+			},
+			{
+				"name": "CIDADE",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "fornecedor"
+		}
+	}
+}

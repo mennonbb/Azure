@@ -1,0 +1,35 @@
+{
+	"name": "filial",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Filial",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "filial.xlsx",
+				"folderPath": "bronze",
+				"fileSystem": "lakemennon"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "COD_FILIAL",
+				"type": "String"
+			},
+			{
+				"name": "ESTADO",
+				"type": "String"
+			},
+			{
+				"name": "CIDADE",
+				"type": "String"
+			}
+		]
+	}
+}
