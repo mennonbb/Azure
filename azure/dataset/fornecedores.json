@@ -1,0 +1,22 @@
+{
+	"name": "fornecedores",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Fornecedor",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "fornecedor.xlsx",
+				"folderPath": "bronze",
+				"fileSystem": "lakemennon"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
