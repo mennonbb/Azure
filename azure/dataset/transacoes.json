@@ -1,0 +1,40 @@
+{
+	"name": "transacoes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Transações",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "transacoes.xlsx",
+				"folderPath": "bronze",
+				"fileSystem": "lakemennon"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "COD_FILIAL",
+				"type": "String"
+			},
+			{
+				"name": "DTNOTA",
+				"type": "String"
+			},
+			{
+				"name": "COD_PRODUTO",
+				"type": "String"
+			},
+			{
+				"name": "QTDE",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

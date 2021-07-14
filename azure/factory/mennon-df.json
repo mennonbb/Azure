@@ -1,0 +1,9 @@
+{
+	"name": "mennon-df",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "40788707-ce37-47bc-8d98-ff1532c318bf",
+		"tenantId": "edd7e1be-90ed-469f-a49f-4875f19afdf9"
+	}
+}
