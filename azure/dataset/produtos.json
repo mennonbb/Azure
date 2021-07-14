@@ -1,0 +1,47 @@
+{
+	"name": "produtos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Produto",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "produtos.xlsx",
+				"folderPath": "bronze",
+				"fileSystem": "lakemennon"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "COD_PRODUTO",
+				"type": "String"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "String"
+			},
+			{
+				"name": "LINHA",
+				"type": "String"
+			},
+			{
+				"name": "FAMILIA",
+				"type": "String"
+			},
+			{
+				"name": "GRUPO",
+				"type": "String"
+			},
+			{
+				"name": "COD_FORNECEDOR",
+				"type": "String"
+			}
+		]
+	}
+}
