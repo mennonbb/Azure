@@ -1,0 +1,41 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "COD_PRODUTO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LINHA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FAMILIA",
+				"type": "nchar"
+			},
+			{
+				"name": "GRUPO",
+				"type": "varchar"
+			},
+			{
+				"name": "COD_FORNECEDOR",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "produto"
+		}
+	}
+}
