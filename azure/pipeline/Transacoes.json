@@ -306,7 +306,7 @@
 				]
 			},
 			{
-				"name": "Copy data1",
+				"name": "Fornecedores",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
