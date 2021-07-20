@@ -1,0 +1,47 @@
+{
+	"name": "DIM_Produto",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "SK_PRODUTO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COD_PRODUTO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DESCRICAO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LINHA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FAMILIA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GRUPO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COD_FORNECEDOR",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DIM_PRODUTO"
+		}
+	}
+}
