@@ -1,0 +1,35 @@
+{
+	"name": "DIM_FORNECEDOR",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "SK_FORNECEDOR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COD_FORNECEDOR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FANTASIA",
+				"type": "varchar"
+			},
+			{
+				"name": "CIDADE",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DIM_FORNECEDOR"
+		}
+	}
+}
