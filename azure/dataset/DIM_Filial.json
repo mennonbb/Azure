@@ -1,0 +1,35 @@
+{
+	"name": "DIM_Filial",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "SK_FILIAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COD_FILIAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ESTADO",
+				"type": "varchar"
+			},
+			{
+				"name": "CIDADE",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DIM_FILIAL"
+		}
+	}
+}
