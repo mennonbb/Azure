@@ -21,11 +21,69 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "SELECT\nb.SK_FILIAL AS FILIAL,\na.dtnota AS DIA,\nc.SK_PRODUTO AS PRODUTO,\na.qtde AS QTDE\nFROM\ntransacoes a\njoin DIM_FILIAL b ON a.COD_FILIAL = b.COD_FILIAL\njoin DIM_PRODUTO c ON a.COD_PRODUTO = c.COD_PRODUTO;",
+						"writeBehavior": "insert",
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "FILIAL",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "SK_FILIAL",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "DIA",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DTNOTA",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "PRODUTO",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "SK_PRODUTO",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "QTDE",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "QTDE",
+									"type": "Int32"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "FT_ESTOQUE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "FATO_SAIDA",
 						"type": "DatasetReference"
 					}
 				]
