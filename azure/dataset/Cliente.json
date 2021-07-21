@@ -1,0 +1,73 @@
+{
+	"name": "Cliente",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "BAIRRO",
+				"type": "varchar"
+			},
+			{
+				"name": "CEP",
+				"type": "varchar"
+			},
+			{
+				"name": "CLASSE",
+				"type": "varchar"
+			},
+			{
+				"name": "CNAE",
+				"type": "varchar"
+			},
+			{
+				"name": "COD_CLIENTE",
+				"type": "varchar"
+			},
+			{
+				"name": "CODIGO",
+				"type": "varchar"
+			},
+			{
+				"name": "COND_PGTO",
+				"type": "varchar"
+			},
+			{
+				"name": "ESTADO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_CLIENTE",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_PESSOA",
+				"type": "varchar"
+			},
+			{
+				"name": "VENDEDOR",
+				"type": "varchar"
+			},
+			{
+				"name": "MUNICIPIO",
+				"type": "varchar"
+			},
+			{
+				"name": "PAIS",
+				"type": "varchar"
+			},
+			{
+				"name": "LOJA",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CLIENTES"
+		}
+	}
+}
