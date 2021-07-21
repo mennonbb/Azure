@@ -1,0 +1,36 @@
+{
+	"name": "FT_ESTOQUE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "SK_FILIAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DTNOTA",
+				"type": "date"
+			},
+			{
+				"name": "SK_PRODUTO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "QTDE",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "FT_ESTOQUE"
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"name": "Fato_Estoque",
+	"properties": {
+		"activities": [
+			{
+				"name": "FATO_ESTOQUE",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT\nb.SK_FILIAL AS FILIAL,\na.dtnota AS DIA,\nc.SK_PRODUTO AS PRODUTO,\na.qtde AS QTDE\nFROM\ntransacoes a\njoin DIM_FILIAL b ON a.COD_FILIAL = b.COD_FILIAL\njoin DIM_PRODUTO c ON a.COD_PRODUTO = c.COD_PRODUTO;",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "FT_ESTOQUE",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "Fato"
+		},
+		"annotations": []
+	}
+}
