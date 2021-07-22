@@ -1,0 +1,41 @@
+{
+	"name": "vendas_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "COD_CLIENTE",
+				"type": "varchar"
+			},
+			{
+				"name": "COD_VENDEDOR",
+				"type": "varchar"
+			},
+			{
+				"name": "DATA_INCLUSAO",
+				"type": "date"
+			},
+			{
+				"name": "QTDE",
+				"type": "varchar"
+			},
+			{
+				"name": "VLR_UNITARIO",
+				"type": "varchar"
+			},
+			{
+				"name": "VLR_TOTAL",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VENDAS"
+		}
+	}
+}
