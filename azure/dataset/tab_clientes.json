@@ -1,0 +1,76 @@
+{
+	"name": "tab_clientes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mennonbb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "BAIRRO",
+				"type": "varchar"
+			},
+			{
+				"name": "CEP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLASSE",
+				"type": "varchar"
+			},
+			{
+				"name": "CNAE",
+				"type": "varchar"
+			},
+			{
+				"name": "COD_CLIENTE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CODIGO",
+				"type": "varchar"
+			},
+			{
+				"name": "COND_PGTO",
+				"type": "varchar"
+			},
+			{
+				"name": "ESTADO",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_CLIENTE",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_PESSOA",
+				"type": "varchar"
+			},
+			{
+				"name": "VENDEDOR",
+				"type": "varchar"
+			},
+			{
+				"name": "MUNICIPIO",
+				"type": "varchar"
+			},
+			{
+				"name": "Localização",
+				"type": "varchar"
+			},
+			{
+				"name": "LOJA",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CLIENTES"
+		}
+	}
+}

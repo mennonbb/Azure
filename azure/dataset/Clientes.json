@@ -1,0 +1,81 @@
+{
+	"name": "Clientes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "clientes.csv",
+				"folderPath": "bronze",
+				"fileSystem": "lakemennon"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "BAIRRO",
+				"type": "String"
+			},
+			{
+				"name": "CEP",
+				"type": "String"
+			},
+			{
+				"name": "CLASSE",
+				"type": "String"
+			},
+			{
+				"name": "CNAE",
+				"type": "String"
+			},
+			{
+				"name": "COD_CLIENTE",
+				"type": "String"
+			},
+			{
+				"name": "CODIGO",
+				"type": "String"
+			},
+			{
+				"name": "COND_PGTO",
+				"type": "String"
+			},
+			{
+				"name": "ESTADO",
+				"type": "String"
+			},
+			{
+				"name": "TP_CLIENTE",
+				"type": "String"
+			},
+			{
+				"name": "TP_PESSOA",
+				"type": "String"
+			},
+			{
+				"name": "VENDEDOR",
+				"type": "String"
+			},
+			{
+				"name": "MUNICIPIO",
+				"type": "String"
+			},
+			{
+				"name": "Localização",
+				"type": "String"
+			},
+			{
+				"name": "LOJA",
+				"type": "String"
+			}
+		]
+	}
+}
