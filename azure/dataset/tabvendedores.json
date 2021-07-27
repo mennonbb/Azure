@@ -1,0 +1,29 @@
+{
+	"name": "tabvendedores",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mennonbb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CODIGO",
+				"type": "varchar"
+			},
+			{
+				"name": "GERENTE",
+				"type": "varchar"
+			},
+			{
+				"name": "TP_VENDEDOR",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VENDEDORES"
+		}
+	}
+}

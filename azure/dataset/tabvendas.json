@@ -1,0 +1,41 @@
+{
+	"name": "tabvendas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mennonbb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "COD_CLIENTE",
+				"type": "varchar"
+			},
+			{
+				"name": "COD_VENDEDOR",
+				"type": "varchar"
+			},
+			{
+				"name": "DATA_INCLUSAO",
+				"type": "varchar"
+			},
+			{
+				"name": "QTDE",
+				"type": "varchar"
+			},
+			{
+				"name": "VLR_TOTAL",
+				"type": "varchar"
+			},
+			{
+				"name": "VLR_UNITARIO",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VENDAS"
+		}
+	}
+}

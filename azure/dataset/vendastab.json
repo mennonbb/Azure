@@ -1,0 +1,101 @@
+{
+	"name": "vendastab",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "vendas.csv",
+				"folderPath": "bronze",
+				"fileSystem": "lakemennon"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ASSINATURA",
+				"type": "String"
+			},
+			{
+				"name": "COD_CLIENTE",
+				"type": "String"
+			},
+			{
+				"name": "COD_VENDEDOR",
+				"type": "String"
+			},
+			{
+				"name": "CodCliente_NF",
+				"type": "String"
+			},
+			{
+				"name": "COMPETENCIA",
+				"type": "String"
+			},
+			{
+				"name": "CONDICAO_PAGTO",
+				"type": "String"
+			},
+			{
+				"name": "CONTRATO",
+				"type": "String"
+			},
+			{
+				"name": "Ano",
+				"type": "String"
+			},
+			{
+				"name": "Trimestre",
+				"type": "String"
+			},
+			{
+				"name": "Mês",
+				"type": "String"
+			},
+			{
+				"name": "Dia",
+				"type": "String"
+			},
+			{
+				"name": "DATA_INCLUSAO",
+				"type": "String"
+			},
+			{
+				"name": "PRODUTO",
+				"type": "String"
+			},
+			{
+				"name": "QTDE",
+				"type": "String"
+			},
+			{
+				"name": "ORIGEM",
+				"type": "String"
+			},
+			{
+				"name": "DIA_FATURAMENTO",
+				"type": "String"
+			},
+			{
+				"name": "SITUACAO",
+				"type": "String"
+			},
+			{
+				"name": "VLR_TOTAL",
+				"type": "String"
+			},
+			{
+				"name": "VLR_UNITARIO",
+				"type": "String"
+			}
+		]
+	}
+}

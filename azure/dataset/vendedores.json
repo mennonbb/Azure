@@ -1,0 +1,37 @@
+{
+	"name": "vendedores",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "vendedores.csv",
+				"folderPath": "bronze",
+				"fileSystem": "lakemennon"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CODIGO",
+				"type": "String"
+			},
+			{
+				"name": "GERENTE",
+				"type": "String"
+			},
+			{
+				"name": "TP_VENDEDOR",
+				"type": "String"
+			}
+		]
+	}
+}
